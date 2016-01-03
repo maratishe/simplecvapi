@@ -1,0 +1,9 @@
+FROM sightmachine/simplecv
+RUN \
+	cd / && \
+	rm -Rf test && \
+	mkdir test && \
+	cd test
+COPY . /test
+WORKDIR /test
+#CMD [ "php", "php example.php server 0.0.0.0:8001"]
